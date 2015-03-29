@@ -1,0 +1,4 @@
+[0mGET /url/551791ae1dc0ccce600da52a [32m200 [0m14.384 ms - 2[0m
+http://www.recruit.jp/
+[0mPOST /api/v1/shortenurl [32m200 [0m582.757 ms - 62[0m
+[0mGET /url/55179281a778f91462d1b1d6 [32m200 [0m2.359 ms - 2[0m

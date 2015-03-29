@@ -17,28 +17,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // main contents
-app.use('/api/v1', require('./rout/v1.js'));
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-	res.ng(404, new APIError.notFound())
-});
-
-
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-	app.use(function(err, req, res, next) {
-		res.ng(500, new APIError.unknown(err.message));
-	});
-}
+app.use('/', require('./rout/v1.js'));
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-	res.ng(500, new APIError.unknown());
+	res.send(err);
 });
 
 
